@@ -27,6 +27,7 @@ namespace Maze.Tests
         };
 
         public const string DeadEnd = " X X X      X  XXXXX        XXXXXXXXXXXXXXXXXXXXX";
+        
         public static readonly (int y, int x) DeadEndStart = (0, 0);
         public static readonly (int y, int x) DeadEndEnd = (0, 6);
         public static readonly IEnumerable<Direction> DeadEndSolution = new[]
@@ -45,6 +46,16 @@ namespace Maze.Tests
             Direction.Down, Direction.Right, Direction.Right, 
             Direction.Up, Direction.Up, Direction.Right, Direction.Right,
             Direction.Down, Direction.Down
+        };
+
+        public const string Diagonal = " XXXXXX  XXXXXX  XXXXXX  XXXXXX  XXXXXX  XXXXXX  ";
+        public static readonly (int y, int x) DiagonalStart = (0, 0);
+        public static readonly (int y, int x) DiagonalEnd = (6, 6);
+        public static readonly IEnumerable<Direction> DiagonalSolution = new[]
+        {
+            Direction.Down, Direction.Right, Direction.Down, Direction.Right,
+            Direction.Down, Direction.Right, Direction.Down, Direction.Right,
+            Direction.Down, Direction.Right, Direction.Down, Direction.Right
         };
 
         public const string NoSolution = @" X XXXXXX";

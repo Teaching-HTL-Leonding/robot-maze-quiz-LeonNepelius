@@ -33,6 +33,12 @@ namespace Maze.Tests
         }
 
         [Fact]
+        public void Diagonal()
+        {
+            MoveAndCheckPosition(Mazes.Diagonal, Mazes.DiagonalStart, Mazes.DiagonalEnd);
+        }
+
+        [Fact]
         public void NoSolution()
         {
             var robot = MoveToExit(Mazes.NoSolution, Mazes.NoSolutionStart, Mazes.NoSolutionEnd);
